@@ -1,5 +1,5 @@
 "use strict"
-function solveEquation(a, b, c) {
+/*function solveEquation(a, b, c) {
   const d = b ** 2 - 4 * a * c;
 
   if (d < 0) {
@@ -12,7 +12,7 @@ function solveEquation(a, b, c) {
     const root2 = (-b - Math.sqrt(d)) / (2 * a);
     return [root1, root2];
   }
-}
+}*/
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let p = percent;
   if (typeof percent === 'string') {
