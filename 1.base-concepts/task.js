@@ -13,7 +13,6 @@ function solveEquation(a, b, c) {
     return [root1, root2];
   }
 }
-
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let p = percent;
   if (typeof percent === 'string') {
@@ -34,13 +33,14 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   if (typeof countMonths === 'string') {
     n = Number(countMonths);
   }
+
   if (a <= c) {
     return 0;
   }
+
   const monthlyRate = (p / 100) / 12;
   const loanBody = a - c;
   const monthlyPayment = loanBody * (monthlyRate + (monthlyRate / ((1 + monthlyRate) ** n - 1)));
   const totalPayment = c + monthlyPayment * n;
-  
   return Math.round(totalPayment * 100) / 100;
 }
